@@ -57,7 +57,7 @@ public class BinarySearch {
 
     public void delete(int value ){
         int i ;
-        for ( i = 0 ; i < nElements ; i++){
+        for ( i = 0 ; i < nElements - 1; i++){
             if (array[i] == value){
                 break;
             }
