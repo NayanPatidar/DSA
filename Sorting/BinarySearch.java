@@ -57,13 +57,13 @@ public class BinarySearch {
 
     public void delete(int value ){
         int i ;
-        for ( i = 0 ; i < nElements - 1; i++){
+        for ( i = 0 ; i < nElements; i++){
             if (array[i] == value){
                 break;
             }
         }
 
-        for (int j = i ; j < nElements ; j++ ){
+        for (int j = i ; j < nElements - 1 ; j++ ){
             array[j] = array[j+1];
         }
         nElements--;
