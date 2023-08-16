@@ -1,0 +1,36 @@
+Insertion in an Unordered Array: Const
+Insertion into an unordered array is the only algorithm
+we've seen that doesn't depend on how many items are in the array. The new item is always places in the next available position, at a[nElem], and then nElem is incremented. This requires the same amount of time no matter how big N-the number of items in the array-is. We can say that the time, T, to insert an item into an unsorted array is a constant K.
+
+T = K
+
+---------------------------Linear Search------------------------
+We've seen that, in a linear search of items in an array, the number of comparisons that 
+must be made to find a specified item is, on the average, half of the total number of 
+items. Thus, if N is the total number of items, the search time T is proportional to half of N:
+
+T = K * N / 2
+
+For a handier formula, we could lump the 2 into the K. Our new K is equal to the old K 
+divided by 2. Now we have T = K * N
+
+
+----------Binary Search: Proportional to log(N)-----------
+Similarly, we can concoct a formula relating T and N for a binary search:
+T = K * log2(N)
+
+Actually, because any logarithm is related to any other logarithm by a constant (3.322 to go from base 2 to 
+base 10), we can lump this constant into K as well. Then we don't need to specify the 
+base:
+T = K * log(N)
+
+
+Algorithm Running Time in Big O Notation
+Linear search O(N)
+Binary search O(log N)
+Insertion in unordered array O(1)
+Insertion in ordered array O(N)
+Deletion in unordered array O(N)
+Deletion in ordered array O(N)
+
+
