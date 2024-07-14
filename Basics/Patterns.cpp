@@ -343,10 +343,64 @@ void PatternTwenty(int n){
         cout << endl;
 
     }
+}
+
+void PatternTwentyOne(int n){
+    int spaces = 0;
+    for (int i = 0; i < 2*n; i++)
+    {
+        int stars = i == 0 || i == 2*n-1 ? n : 1 ;
+        spaces = i == 0 || i == 2*n-1 ? 0 : 2*n-2 ;
+        for (int j = 0; j < stars; j++)
+        {
+            cout << "* ";
+        }
+        for (int j = 0; j < spaces; j++)
+        {
+          cout << "  ";   
+        }
+        for (int j = 0; j < stars; j++)
+        {
+            cout << "* ";
+        }
+        
+        cout << endl;
+    }
     
 }
 
+void PatternTwentyTwo(int n){
+    int leftLoop = 0;
+    int middleLoop = 0;
+    for (int i = 0; i < 2*n-1; i++)
+    {
+        if (i < n) {
+            leftLoop = i;
+            middleLoop = 2*n-3-2*i;
+        } else {            
+            leftLoop = 2*n-2-i ;
+            middleLoop = 2*(i-n)+1;
+        }
+        for (int j = 0; j <= leftLoop; j++)
+        {
+            if (n-j == 1)
+            {
+                break;
+            }
+            cout << n-j << " " ;
+        }
+        for (int j = 0; j < middleLoop; j++)
+        {
+            cout << n-leftLoop << " " ;
+        }
+        for (int j = n-leftLoop; j <= n; j++)
+        {
+            cout << j << " " ;
+        }
+        cout << endl;
+    }
+}
 int main(){
-    PatternTwenty(5);
+    PatternTwentyTwo(9);
     return 0;
 }
