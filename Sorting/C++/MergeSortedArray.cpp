@@ -12,25 +12,21 @@ void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
         if (nums1[a] <= nums2[b] && a <= m-1)
         {
             dup.push_back(nums1[a]);
-      //      cout << nums1[a] << "-" << a << " ";
             a++;
         } else {
             dup.push_back(nums2[b]);
-      //      cout << nums2[b] << "-" << b << " ";
             b++;
         }
     }
 
     while ( a <= m-1)
     {
-      //  cout << nums1[a] << " ";
         dup.push_back(nums1[a]);
         a++;
     }
 
     while ( b <= n-1)
     {
-      //  cout << nums2[b] << " ";
         dup.push_back(nums2[b]);
         b++;
     }
@@ -46,13 +42,6 @@ void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
     {
         cout << nums1[i] << " " ;
     }
-    
-
-    // for (auto i = dup.begin(); i != dup.end(); i++)
-    // {
-    //     cout << *i << endl;
-    // }
-    
     
 }
 
